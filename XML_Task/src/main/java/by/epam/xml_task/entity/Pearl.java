@@ -4,6 +4,10 @@ public class Pearl extends Gem{
 
     private int radius;
 
+    public Pearl() {
+
+    }
+
     public Pearl(String id, String color, Origin origin, int radius) {
         super(id, color, origin);
         this.radius = radius;

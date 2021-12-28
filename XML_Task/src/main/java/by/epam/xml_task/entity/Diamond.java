@@ -4,6 +4,8 @@ public class Diamond extends Gem{
 
     private int countOfEdges;
 
+    public Diamond() {
+    }
 
     public Diamond(String id, String color, Origin origin, int countOfEdges) {
         super(id, color, origin);

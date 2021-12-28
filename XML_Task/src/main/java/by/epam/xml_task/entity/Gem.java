@@ -6,6 +6,10 @@ public class Gem {
     private String color;
     private Origin origin;
 
+    public Gem() {
+
+    }
+
     public Gem(String id, String color, Origin origin) {
         this.id = id;
         this.color = color;
