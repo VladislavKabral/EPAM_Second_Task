@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.example.com/gems"
+      xsi:schemaLocation="http://www.example.com/gems gemsSchema.xsd">
+    <diamond id="GEM11111" origin="underwater">
+        <color>red</color>
+        <countOfEdges>1000</countOfEdges>
+    </diamond>
+
+    <computer id="COMPUTER12345">
+        <ram>16</ram>
+        <cpu>intel</cpu>
+        <graphic>nvidia</graphic>
+    </computer>
+
+    <pearl id="GEM22222" origin="underwater">
+        <color>13</color>
+        <radius>-2</radius>
+    </pearl>
+
+</gems>
