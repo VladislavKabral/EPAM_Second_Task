@@ -55,14 +55,13 @@ public class DomParser implements Parser{
         }
     }
 
-    private List<Gem> createListOfGems(Element root, String tagName) {
+    private void createListOfGems(Element root, String tagName) {
         NodeList gemsList = root.getElementsByTagName(tagName);
         for (int i = 0; i < gemsList.getLength(); i++) {
             Element element = (Element) gemsList.item(i);
             createGem(element, tagName);
             gems.add(currentGem);
         }
-        return gems;
     }
 
     @Override

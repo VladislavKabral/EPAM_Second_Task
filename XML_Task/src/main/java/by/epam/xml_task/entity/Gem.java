@@ -1,9 +1,18 @@
 package by.epam.xml_task.entity;
 
+import javax.xml.bind.annotation.*;
+
+@XmlSeeAlso({Diamond.class, Pearl.class})
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Gem {
 
+    @XmlAttribute(name = "id")
     private String id;
+
+    @XmlElement(name = "color", namespace = "http://www.example.com/gems")
     private String color;
+
+    @XmlAttribute(name = "origin")
     private Origin origin;
 
     public Gem() {

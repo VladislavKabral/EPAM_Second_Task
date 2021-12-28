@@ -1,7 +1,15 @@
 package by.epam.xml_task.entity;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "pearl")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Pearl extends Gem{
 
+    @XmlElement(name = "radius", namespace = "http://www.example.com/gems")
     private int radius;
 
     public Pearl() {
@@ -49,9 +57,9 @@ public class Pearl extends Gem{
     @Override
     public String toString() {
         return "Pearl[" +
-                "id=" + getId() +
-                "color=" + getColor() +
-                "origin=" + getOrigin().toString() +
+                "id=" + getId() + " " +
+                "color=" + getColor() + " " +
+                "origin=" + getOrigin().toString() + " " +
                 "radius=" + radius +
                 ']';
     }
