@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.example.com/gems"
+      xsi:schemaLocation="http://www.example.com/gems gemsSchema.xsd">
+      <diamond id="GEM12345" origin="underground">
+          <color>red</color>
+          <countOfEdges>9</countOfEdges>
+      </diamond>
+      <diamond id="GEM12346" origin="underwater">
+          <color>green</color>
+          <countOfEdges>10</countOfEdges>
+      </diamond>
+      <diamond id="GEM12347" origin="mountain">
+          <color>blue</color>
+          <countOfEdges>7</countOfEdges>
+      </diamond>
+      <pearl id="GEM98765" origin="underwater">
+          <color>white</color>
+          <radius>7</radius>
+      </pearl>
+      <pearl id="GEM98764" origin="underwater">
+          <color>pink</color>
+          <radius>5</radius>
+      </pearl>
+      <pearl id="GEM98763" origin="underwater">
+          <color>white</color>
+          <radius>9</radius>
+      </pearl>
+</gems>

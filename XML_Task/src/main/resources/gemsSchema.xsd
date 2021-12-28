@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/gems"
+        xmlns:tns="http://www.example.com/gems"
+        elementFormDefault="qualified">
+        <element name="gems">
+                <complexType>
+                        <sequence>
+                                <element name="diamond" type="tns:Diamond" minOccurs="0" maxOccurs="100"/>
+                                <element name="pearl" type="tns:Pearl" minOccurs="0" maxOccurs="100"/>
+                        </sequence>
+                </complexType>
+        </element>
+        <complexType name="Diamond">
+                <sequence>
+                        <element name="color" type="string"/>
+                        <element name="countOfEdges">
+                                <simpleType>
+                                        <restriction base="positiveInteger">
+                                                <pattern value="([3-9]){1}|10|11|12"/>
+                                        </restriction>
+                                </simpleType>
+                        </element>
+                </sequence>
+                <attribute name="id" type="tns:Id" use="required"/>
+                <attribute name="origin" type="tns:Origin" use="optional" default="underground"/>
+        </complexType>
+        <complexType name="Pearl">
+                <sequence>
+                        <element name="color" type="string"/>
+                        <element name="radius">
+                                <simpleType>
+                                        <restriction base="positiveInteger">
+                                                <pattern value="[1-9]{1}"/>
+                                        </restriction>
+                                </simpleType>
+                        </element>
+                </sequence>
+                <attribute name="id" type="tns:Id" use="required"/>
+                <attribute name="origin" type="tns:Origin" use="optional" default="underground"/>
+        </complexType>
+        <simpleType name="Id">
+                <restriction base="ID">
+                        <pattern value="([a-zA-Z])[a-zA-Z0-9]{7,19}"/>
+                </restriction>
+        </simpleType>
+        <simpleType name="Origin">
+                <restriction base="string">
+                        <enumeration value="underground">
+                        </enumeration>
+                        <enumeration value="underwater">
+                        </enumeration>
+                        <enumeration value="mountain">
+                        </enumeration>
+                </restriction>
+        </simpleType>
+</schema>
